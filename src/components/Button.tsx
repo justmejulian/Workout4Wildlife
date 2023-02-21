@@ -1,6 +1,10 @@
 function Button() {
   return (
-    <button onClick={() => console.log("Button Clicked")}>
+    <button
+      onClick={() => {
+        console.log("Button Clicked");
+      }}
+    >
       Hello
     </button>
   );
