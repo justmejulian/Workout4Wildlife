@@ -10,7 +10,9 @@
     "eslint": "npx eslint .",
     "eslint:fix": "npx eslint . --fix",
     "prettier": "npx prettier --check .",
-    "prettier:fix": "npx prettier --write ."
+    "prettier:fix": "npx prettier --write .",
+    "code": "npx eslint .; npx prettier --check .",
+    "code:fix": "npx eslint . --fix; npx prettier --write ."
   },
   "dependencies": {
     "@astrojs/react": "^2.0.2",
