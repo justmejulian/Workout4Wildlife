@@ -5,17 +5,17 @@ module.exports = {
     node: true,
   },
   extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:astro/recommended",
-    "prettier",
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:astro/recommended',
+    'prettier',
   ],
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
-  plugins: ["react", "@typescript-eslint"],
+  plugins: ['react', '@typescript-eslint'],
   rules: {
     // ESLint: https://eslint.org/docs/latest/rules/
     // TypeScript: https://typescript-eslint.io/rules/
@@ -23,25 +23,25 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["*.tsx"],
-      extends: ["plugin:react/recommended"],
+      files: ['*.tsx'],
+      extends: ['plugin:react/recommended'],
       rules: {
         // React: https://github.com/jsx-eslint/eslint-plugin-react#list-of-supported-rules
-        "react/react-in-jsx-scope": "off",
+        'react/react-in-jsx-scope': 'off',
       },
       settings: {
         react: {
-          version: "detect",
+          version: 'detect',
         },
       },
     },
     {
-      files: ["*.astro"],
-      parser: "astro-eslint-parser",
+      files: ['*.astro'],
+      parser: 'astro-eslint-parser',
       parserOptions: {
-        parser: "@typescript-eslint/parser",
-        extraFileExtensions: [".astro"],
+        parser: '@typescript-eslint/parser',
+        extraFileExtensions: ['.astro'],
       },
     },
   ],
-};
+}
