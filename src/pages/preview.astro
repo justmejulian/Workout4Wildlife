@@ -1,5 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Hero from '../components/Hero.astro';
+import Story from '../components/Story.astro';
+import JoinInfo from '../components/JoinInfo.astro';
+import Prize from '../components/Prize.astro';
+import Beneficiary from '../components/Beneficiary.astro';
+import Partners from '../components/Partners.astro';
+import Viatu from '../components/Viatu.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -7,12 +16,15 @@ import Layout from '../layouts/Layout.astro'
     {'🚧 This is a preview. Page is under construction. 🚧'}
   </div>
   <main>
-    <h1>
-      {`Workout`}
-      <span class="text-gradient">4</span>
-      {` Wildlife`}
-    </h1>
-    <h2>Stay Tuned!</h2>
+    <Navigation />
+    <Hero />
+    <Story/>
+    <JoinInfo />
+    <Prize />
+    <Beneficiary />
+    <Partners />
+    <Viatu />
+    <Footer />
   </main>
 </Layout>
 
@@ -25,28 +37,7 @@ import Layout from '../layouts/Layout.astro'
   }
   main {
     margin: auto;
-    max-width: 60ch;
+    max-width: 1456px;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-  }
-  h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin: 0;
-  }
-  .text-gradient {
-    background-image: linear-gradient(#eee, #000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
   }
 </style>
