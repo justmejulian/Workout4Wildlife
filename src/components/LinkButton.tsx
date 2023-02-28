@@ -5,13 +5,13 @@ interface LinkButtonProps {
   url: string;
 }
 
-function LinkButton(props: LinkButtonProps) {
+function LinkButton({ title, url }: LinkButtonProps) {
   return (
     <Button
       onClick={() => {
-        window.open(props.url, '_blank')?.focus();
+        window.open(url, '_blank')?.focus();
       }}
-      title={props.title}
+      title={title}
     />
   );
 }

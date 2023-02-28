@@ -6,10 +6,10 @@ interface ButtonProps {
   onClick: MouseEventHandler<HTMLButtonElement>;
 }
 
-function Button(props: ButtonProps) {
+function Button( { title, onClick }: ButtonProps ) {
   return (
-    <button type="button" className={styles.button} onClick={props.onClick}>
-      {props.title}
+    <button type="button" className={styles.button} onClick={onClick}>
+      {title}
     </button>
   );
 }
