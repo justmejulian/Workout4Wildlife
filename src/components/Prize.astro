@@ -1,19 +1,11 @@
 ---
-import Header from './Header.astro';
+import Section from './Section.astro';
 ---
 
-<div id="prize">
-  <Header text="Grand Prize" align="center" />
-</div>
-
-<style>
-  #prize {
-    width: 100%;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: #F4F4F4;
-  }
-</style>
+<Section
+  id="prize"
+  title="Grand Prize"
+  text={'Our lucky draw will determine the winner of an action-packed once-in-a-lifetime trip to Namibia worth $15,000.'}
+>
+  <p>Children</p>
+</Section>

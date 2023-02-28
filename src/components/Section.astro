@@ -1,0 +1,27 @@
+---
+import Header from './Header.astro';
+
+interface Props {
+  id: string;
+  title: string;
+  text?: string;
+}
+
+const { id, title, text }: Props = Astro.props;
+---
+
+<div id={id}>
+  <Header text={title} align="center" />
+  <p>{text}</p>
+  <slot />
+</div>
+
+<style>
+  div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
