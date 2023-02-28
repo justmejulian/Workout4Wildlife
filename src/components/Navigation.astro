@@ -1,14 +1,57 @@
 ---
+import SignUpButton from './SignUpButton';
 ---
 
-<nav id="navigation">Navigation</nav>
+<nav id="navigation">
+  <div class="logo">Workout4Wildlife</div>
+
+  <div>
+    <a href="#story">Story</a>
+    <a href="#join">Join Us</a>
+    <a href="#prize">Prize</a>
+    <a href="#beneficiary">Beneficiary</a>
+    <SignUpButton />
+  </div>
+</nav>
 
 <style>
   #navigation {
+    box-sizing: border-box;
+    padding: 18px 120px;
     width: 100%;
     height: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+  }
+
+  a {
+    position: relative;
+    font-family: 'Satoshi-Black';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 27px;
+    color: #541736;
+
+    margin-right: 40px;
+
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #fe9fab;
+  }
+
+  a:hover::after {
+    background-color: #fe9fab;
+    content: '';
+    width: 80%;
+    height: 3px;
+    position: absolute;
+    bottom: -8px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
   }
 </style>
