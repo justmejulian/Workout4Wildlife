@@ -1,0 +1,43 @@
+---
+interface Props {
+  align: 'left' | 'center';
+  text: string;
+}
+
+const { align, text }: Props = Astro.props;
+---
+
+<h1 class:list={[{ left: align === 'left', center: align === 'center' }]}>
+  {text}
+</h1>
+
+<style>
+  h1 {
+    position: relative;
+    font-family: 'Krona One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 62px;
+    color: #541736;
+  }
+
+  h1::after {
+    background-color: #fe9fab;
+    content: '';
+    width: 80px;
+    height: 4px;
+    position: absolute;
+    bottom: -4px;
+  }
+
+  .left::after {
+    left: 0px;
+  }
+
+  .center::after {
+    left: 0px;
+    right: 0px;
+    margin: auto;
+  }
+</style>
