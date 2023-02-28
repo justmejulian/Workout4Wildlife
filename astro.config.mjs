@@ -5,6 +5,6 @@ import react from '@astrojs/react';
 
 export default defineConfig({
   site: 'https://justmejulian.github.io',
-  base: '/Workout4Wildlife',
+  base: '/Workout4Wildlife/',
   integrations: [react()],
 });
