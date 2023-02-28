@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Satoshi-Light';
-  src: url('/Workout4Wildlife/fonts/Satoshi-Light.ttf') format('truetype');
+  src: url('/fonts/Satoshi-Light.ttf') format('truetype');
   font-weight: 300;
   font-display: swap;
   font-style: normal;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'Satoshi-LightItalic';
-  src: url('/Workout4Wildlife/fonts/Satoshi-LightItalic.ttf') format('truetype');
+  src: url('/fonts/Satoshi-LightItalic.ttf') format('truetype');
   font-weight: 300;
   font-display: swap;
   font-style: italic;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'Satoshi-Regular';
-  src: url('/Workout4Wildlife/fonts/Satoshi-Regular.ttf') format('truetype');
+  src: url('/fonts/Satoshi-Regular.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: 'Satoshi-Italic';
-  src: url('/Workout4Wildlife/fonts/Satoshi-Italic.ttf') format('truetype');
+  src: url('/fonts/Satoshi-Italic.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
   font-style: italic;
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: 'Satoshi-Medium';
-  src: url('/Workout4Wildlife/fonts/Satoshi-Medium.ttf') format('truetype');
+  src: url('/fonts/Satoshi-Medium.ttf') format('truetype');
   font-weight: 500;
   font-display: swap;
   font-style: normal;
@@ -40,7 +40,7 @@
 
 @font-face {
   font-family: 'Satoshi-MediumItalic';
-  src: url('/Workout4Wildlife/fonts/Satoshi-MediumItalic.ttf')
+  src: url('/fonts/Satoshi-MediumItalic.ttf')
     format('truetype');
   font-weight: 500;
   font-display: swap;
@@ -49,7 +49,7 @@
 
 @font-face {
   font-family: 'Satoshi-Bold';
-  src: url('/Workout4Wildlife/fonts/Satoshi-Bold.ttf') format('truetype');
+  src: url('/fonts/Satoshi-Bold.ttf') format('truetype');
   font-weight: 700;
   font-display: swap;
   font-style: normal;
@@ -57,7 +57,7 @@
 
 @font-face {
   font-family: 'Satoshi-BoldItalic';
-  src: url('/Workout4Wildlife/fonts/Satoshi-BoldItalic.ttf') format('truetype');
+  src: url('/fonts/Satoshi-BoldItalic.ttf') format('truetype');
   font-weight: 700;
   font-display: swap;
   font-style: italic;
@@ -65,7 +65,7 @@
 
 @font-face {
   font-family: 'Satoshi-Black';
-  src: url('/Workout4Wildlife/fonts/Satoshi-Black.ttf') format('truetype');
+  src: url('/fonts/Satoshi-Black.ttf') format('truetype');
   font-weight: 900;
   font-display: swap;
   font-style: normal;
@@ -73,7 +73,7 @@
 
 @font-face {
   font-family: 'Satoshi-BlackItalic';
-  src: url('/Workout4Wildlife/fonts/Satoshi-BlackItalic.ttf') format('truetype');
+  src: url('/fonts/Satoshi-BlackItalic.ttf') format('truetype');
   font-weight: 900;
   font-display: swap;
   font-style: italic;
@@ -81,7 +81,7 @@
 
 @font-face {
   font-family: 'KronaOne-Regular';
-  src: url('/Workout4Wildlife/fonts/KronaOne-Regular.ttf') format('truetype');
+  src: url('/fonts/KronaOne-Regular.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
   font-style: normal;

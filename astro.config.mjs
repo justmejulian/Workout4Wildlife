@@ -4,7 +4,6 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 
 export default defineConfig({
-  site: 'https://justmejulian.github.io',
-  base: '/Workout4Wildlife/',
+  site: 'https://workout4wildlife.com',
   integrations: [react()],
 });
