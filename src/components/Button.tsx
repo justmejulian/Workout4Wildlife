@@ -1,14 +1,20 @@
+import type { MouseEventHandler } from 'react';
 import styles from './Button.module.css';
 
-function Button() {
+interface ButtonProps {
+  title: string,
+  onClick: MouseEventHandler<HTMLButtonElement>
+}
+
+function Button(props: ButtonProps) {
+
   return (
     <button
+      type="button"
       className={styles.button}
-      onClick={() => {
-        console.log('Button Clicked');
-      }}
+      onClick={props.onClick}
     >
-      Hello
+      {props.title}
     </button>
   );
 }
