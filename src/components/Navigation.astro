@@ -1,23 +1,33 @@
 ---
+import MobileNavigation from './MobileNavigation';
 import SignUpButton from './SignUpButton';
+
+const menuItemList = [
+  { link: '#story', title: 'Story' },
+  { link: '#join', title: 'Join Us' },
+  { link: '#prize', title: 'Prize' },
+  { link: '#beneficiary', title: 'Beneficiary' },
+];
 ---
 
 <nav id="navigation">
   <div class="logo">Workout4Wildlife</div>
 
-  <div>
-    <a href="#story">Story</a>
-    <a href="#join">Join Us</a>
-    <a href="#prize">Prize</a>
-    <a href="#beneficiary">Beneficiary</a>
+  <div class="desktopNavigation">
+    {
+      menuItemList.map((menuItem) => (
+        <a href={menuItem.link}>{menuItem.title}</a>
+      ))
+    }
     <SignUpButton />
   </div>
+  <MobileNavigation menuItemList={menuItemList} client:load />
 </nav>
 
 <style>
   #navigation {
     box-sizing: border-box;
-    padding: 18px 120px;
+    padding: 20px 120px;
     width: 100%;
     height: 100px;
     display: flex;
@@ -53,5 +63,11 @@ import SignUpButton from './SignUpButton';
     left: 0px;
     right: 0px;
     margin: auto;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .desktopNavigation {
+      display: none;
+    }
   }
 </style>

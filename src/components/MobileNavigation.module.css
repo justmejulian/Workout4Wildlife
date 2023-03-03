@@ -1,0 +1,32 @@
+.container {
+  display: none;
+}
+
+.linkContainer {
+  position: absolute;
+  background-color: #541736;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px 0px 16px 16px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.link {
+  font-family: 'KronaOne-Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: #fe9fab;
+  text-decoration: none;
+  padding: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    display: block;
+  }
+}
