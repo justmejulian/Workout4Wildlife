@@ -1,0 +1,10 @@
+.hamburger {
+  stroke: #541736;
+  cursor: pointer;
+  height: 24px;
+  width: 32px;
+}
+
+.hamburger:hover {
+  stroke: #fe9fab;
+}
