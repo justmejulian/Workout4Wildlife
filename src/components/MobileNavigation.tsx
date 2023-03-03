@@ -14,12 +14,17 @@ function MobileNavtigation({ menuItemList }: MobileNavtigationProps) {
     setMenuOpen((prevState: boolean) => !prevState);
   }
   return (
-    <div className={styles.container} >
+    <div className={styles.container}>
       <Hamburger onClick={handleOnClick} />
       {menuOpen && (
         <div className={styles.linkContainer}>
           {menuItemList.map((menuItem) => (
-            <a className={styles.link} key={menuItem.link} href={menuItem.link} onClick={() => setMenuOpen(false)}>
+            <a
+              className={styles.link}
+              key={menuItem.link}
+              href={menuItem.link}
+              onClick={() => setMenuOpen(false)}
+            >
               {menuItem.title}
             </a>
           ))}
