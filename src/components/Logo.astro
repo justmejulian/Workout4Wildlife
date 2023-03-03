@@ -1,12 +1,3 @@
----
-export interface Props {
-  height: string;
-  width: string;
-}
-
-const { height, width }: Props = Astro.props;
----
-
 <svg viewBox="0 0 107 30" fill="none" xmlns="http://www.w3.org/2000/svg">
   <g clip-path="url(#clip0_202_49)">
     <path
@@ -65,9 +56,15 @@ const { height, width }: Props = Astro.props;
   </defs>
 </svg>
 
-<style define:vars={{ width, height }}>
+<style>
   svg {
-    height: var(--height);
-    width: var(--width);
+    height: 52px;
+    width: 192px;
+  }
+  @media only screen and (max-width: 970px) {
+    svg {
+      height: 32px;
+      width: 108px;
+    }
   }
 </style>
