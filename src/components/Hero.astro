@@ -13,16 +13,15 @@ import SignUpButton from './SignUpButton';
 <style>
   #hero {
     width: 100%;
-    height: 612px;
+    height: 640px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 
-    background: rgba(0, 0, 0, 0.4) url('../images/rhino.png');
-    background-blend-mode: multiply;
-    background-position: top;
+    background: url('../images/hero-desktop.png');
+    background-position: center;
     background-size: cover;
   }
   p {
@@ -35,5 +34,14 @@ import SignUpButton from './SignUpButton';
     color: #ffffff;
     margin: 0px;
     margin-bottom: 100px;
+  }
+
+  @media only screen and (max-width: 970px) {
+    #hero {
+      height: 456px;
+      background: rgba(0, 0, 0, 0.4) url('../images/hero-mobile.png');
+      background-blend-mode: multiply;
+      background-position: center -32px;
+    }
   }
 </style>
