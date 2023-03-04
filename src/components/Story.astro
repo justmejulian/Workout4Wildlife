@@ -1,20 +1,78 @@
 ---
 import Header from './Header.astro';
+import StoryImage from '../images/story.png';
 ---
 
 <div id="story">
-  <Header text="Our story" align="left" />
+  <div class="text">
+    <Header text="Our story" align="left" />
+    <p>
+      Workout4Wildlife was born out of a passion for fitness and wildlife
+      conservation. In 2022, we went on a bike ride across Namibia, one of the
+      most remote places on earth.
+    </p>
+
+    <p>
+      Blown away by its landscape and wildlife, we challenged ourselves to
+      contribute towards the conservation of the beauty we encountered.
+    </p>
+
+    <p>
+      Upon our return, we founded W4W. Our goal is to leverage the fitness
+      community to raise funds for wildlife conservation projects globally.
+    </p>
+  </div>
+  <img src={StoryImage} alt="Our Story" />
 </div>
 
 <style>
   #story {
+    box-sizing: border-box;
     width: 100%;
-    height: 600px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
+    padding: 60px 120px;
+  }
 
-    background-color: #00c9a5;
+  .text {
+    margin-top: 30px;
+    margin-right: 6px;
+  }
+
+  p {
+    font-family: 'Satoshi-Regular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 34px;
+    margin-bottom: 40px;
+    color: #767676;
+  }
+
+  img {
+    width: 592px;
+    height: 672px;
+  }
+
+  @media (max-width: 1200px) {
+    #story {
+      padding: 60px 40px;
+    }
+  }
+
+  @media only screen and (max-width: 970px) {
+    #story {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    img {
+      width: 292px;
+      height: 332px;
+    }
   }
 </style>
