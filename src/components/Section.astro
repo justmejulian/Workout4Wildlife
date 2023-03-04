@@ -11,7 +11,7 @@ interface Props {
 const { id, title, text, isGray }: Props = Astro.props;
 ---
 
-<div id={id} class:list={[{gray:isGray}]}>
+<div id={id} class:list={[{ gray: isGray }]}>
   <Header text={title} align="center" />
   <p>{text}</p>
   <slot />
@@ -30,7 +30,7 @@ const { id, title, text, isGray }: Props = Astro.props;
   }
 
   .gray {
-    background-color: #F4F4F4;
+    background-color: #f4f4f4;
   }
 
   p {
