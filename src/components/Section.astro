@@ -5,12 +5,13 @@ interface Props {
   id: string;
   title: string;
   text?: string;
+  isGray?: boolean;
 }
 
-const { id, title, text }: Props = Astro.props;
+const { id, title, text, isGray }: Props = Astro.props;
 ---
 
-<div id={id}>
+<div id={id} class:list={[{gray:isGray}]}>
   <Header text={title} align="center" />
   <p>{text}</p>
   <slot />
@@ -26,6 +27,10 @@ const { id, title, text }: Props = Astro.props;
     align-items: center;
     overflow: hidden;
     padding: 60px 200px;
+  }
+
+  .gray {
+    background-color: #F4F4F4;
   }
 
   p {
