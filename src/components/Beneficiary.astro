@@ -1,5 +1,6 @@
 ---
 import Section from './Section.astro';
+import LinkButton from './LinkButton';
 ---
 
 <Section
@@ -8,5 +9,9 @@ import Section from './Section.astro';
   text={'Since 1982, Save the Rhino Trust (SRT) has been protecting the desert-adapted black rhino in order to ensure security for these and other wildlife species, a protected habitat, and a sustainable future for local communities long into the future.'}
   isGray
 >
-  <p>Children</p>
+  <LinkButton
+    title="VISIT SRT"
+    url="https://www.savetherhinotrust.org"
+    client:load
+  />
 </Section>
