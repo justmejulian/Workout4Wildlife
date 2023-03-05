@@ -1,6 +1,7 @@
 ---
 import Header from './Header.astro';
 import StoryImage from '../images/story.png';
+import SubHeader from './SubHeader.astro';
 ---
 
 <div id="story">
@@ -21,6 +22,7 @@ import StoryImage from '../images/story.png';
       Upon our return, we founded W4W. Our goal is to leverage the fitness
       community to raise funds for wildlife conservation projects globally.
     </p>
+    <SubHeader text="Alfred, Guido, Julian & Lukas" />
   </div>
   <img src={StoryImage} alt="Our Story" />
 </div>
@@ -36,7 +38,7 @@ import StoryImage from '../images/story.png';
 
   .text {
     margin-top: 30px;
-    margin-right: 6px;
+    margin-right: 50px;
   }
 
   p {
@@ -51,8 +53,10 @@ import StoryImage from '../images/story.png';
   }
 
   img {
-    width: 592px;
+    /* width: 592px; */
+    width: 40%;
     height: 672px;
+    object-fit: scale-down;
   }
 
   @media (max-width: 1200px) {
