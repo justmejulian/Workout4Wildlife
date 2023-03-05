@@ -49,7 +49,15 @@ const { align, text }: Props = Astro.props;
   @media only screen and (max-width: 970px) {
     h1 {
       font-size: 24px;
+      line-height: 30px;
     }
+
+    h1::after {
+      width: 68px;
+      height: 3px;
+      bottom: -8px;
+    }
+
     .left::after {
       left: 0px;
       right: 0px;
