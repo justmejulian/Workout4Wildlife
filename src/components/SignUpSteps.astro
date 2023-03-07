@@ -7,8 +7,8 @@ import SignUpStep from './SignUpStep.astro';
     stepNumber={1}
     title="Sign Up"
     text="Sign up for $20 to win our grand prize"
-    linesLeft={true}
-    linesRight={false}
+    linesLeft={false}
+    linesRight={true}
   />
   <SignUpStep
     stepNumber={2}
@@ -28,8 +28,8 @@ import SignUpStep from './SignUpStep.astro';
     stepNumber={4}
     title="Win"
     text="Complete the workout before April 23"
-    linesLeft={false}
-    linesRight={true}
+    linesLeft={true}
+    linesRight={false}
   />
 </div>
 
@@ -37,6 +37,11 @@ import SignUpStep from './SignUpStep.astro';
   .sign-up-steps {
     display: flex;
     flex-direction: row;
-    column-gap: 116px;
+  }
+
+  @media only screen and (max-width: 970px) {
+    .sign-up-steps {
+      flex-direction: column;
+    }
   }
 </style>
