@@ -1,4 +1,6 @@
 ---
+import SignUpStepDottedLine from './SignUpStepDottedLine.astro';
+
 export interface Props {
   stepNumber: number;
   title: string;
@@ -11,8 +13,12 @@ const { stepNumber, title, text, linesLeft, linesRight } = Astro.props;
 ---
 
 <div class="sign-up-step">
-  <div class="step-number">
-    {stepNumber}
+  <div class="step-number-container">
+    <SignUpStepDottedLine visible={linesLeft} />
+    <div class="step-number">
+      {stepNumber}
+    </div>
+    <SignUpStepDottedLine visible={linesRight} />
   </div>
   <div class="step-body">
     <h3 class="step-title">{title}</h3>
@@ -20,18 +26,22 @@ const { stepNumber, title, text, linesLeft, linesRight } = Astro.props;
       {text}
     </p>
   </div>
-  {linesLeft && <div class="lines lines-left" />}
-  {linesRight && <div class="lines lines-right" />}
 </div>
 
 <style>
   .sign-up-step {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 150px;
+    width: 236px;
   }
+
+  .step-number-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
   .step-number {
     height: 50px;
     width: 50px;
@@ -43,8 +53,8 @@ const { stepNumber, title, text, linesLeft, linesRight } = Astro.props;
     font-size: 40px;
     font-weight: 700;
     font-family: 'Satoshi-Bold';
-    margin-bottom: 25px;
   }
+
   .step-title {
     font-size: 30px;
     font-weight: 900;
@@ -54,6 +64,7 @@ const { stepNumber, title, text, linesLeft, linesRight } = Astro.props;
     margin: 0;
     margin-bottom: 25px;
   }
+
   .step-text {
     font-size: 20px;
     font-weight: 500;
@@ -62,26 +73,38 @@ const { stepNumber, title, text, linesLeft, linesRight } = Astro.props;
     color: #767676;
     text-align: center;
     margin: 0;
+    width: 135px;
   }
-  .lines {
-    position: absolute;
-    top: 22px;
-    width: 90px;
-    height: 6px;
-    background-image: linear-gradient(
-      to right,
-      #ffe660 75%,
-      rgba(255, 255, 255, 0) 25%
-    );
-    background-position: 0 0;
-    background-size: 24px 6px;
-    background-repeat: repeat-x;
-    border-radius: 3px;
-  }
-  .lines-left {
-    left: 115px;
-  }
-  .lines-right {
-    right: 115px;
+
+  @media only screen and (max-width: 970px) {
+    .sign-up-step {
+      flex-direction: row;
+    }
+
+    .step-number-container {
+      flex-direction: column;
+      margin-bottom: 0px;
+    }
+
+    .step-number {
+    }
+
+    .step-body {
+      margin-left: 20px;
+    }
+
+    .step-title {
+      font-size: 20px;
+      line-height: 27px;
+      text-align: left;
+      margin-bottom: 4px;
+    }
+
+    .step-text {
+      font-size: 16px;
+      line-height: 22px;
+      text-align: left;
+      width: 192px;
+    }
   }
 </style>

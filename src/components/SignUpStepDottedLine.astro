@@ -1,0 +1,30 @@
+---
+import DottedLineHorizontal from './DottedLineHorizontal.astro';
+import DottedLineVertical from './DottedLineVertical.astro';
+
+export interface Props {
+  visible: boolean;
+}
+
+const { visible }: Props = Astro.props;
+---
+
+<>
+  <DottedLineHorizontal class="desktop" visible={visible} />
+  <DottedLineVertical class="mobile" visible={visible} />
+</>
+
+<style>
+  .mobile {
+    display: none;
+  }
+  @media only screen and (max-width: 970px) {
+    .desktop {
+      display: none;
+    }
+
+    .mobile {
+      display: initial;
+    }
+  }
+</style>

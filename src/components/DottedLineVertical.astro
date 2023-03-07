@@ -1,0 +1,25 @@
+---
+export interface Props {
+  class: string;
+  visible: boolean;
+}
+
+const { visible, class: className }: Props = Astro.props;
+---
+
+<svg class={className} xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M3 3L3.00002 413"
+    stroke="#FFE660"
+    stroke-width="6"
+    stroke-linecap="round"
+    stroke-dasharray="12 12"></path>
+</svg>
+
+<style define:vars={{ visibility: visible ? 'visible' : 'hidden' }}>
+  svg {
+    height: 19px;
+    width: 6px;
+    visibility: var(--visibility);
+  }
+</style>
