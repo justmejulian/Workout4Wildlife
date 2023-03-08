@@ -14,6 +14,8 @@ import Footer from '../components/Footer.astro';
 import Spacer from '../components/Spacer.astro';
 import CrowdImage from '../images/crowd.png';
 import RhinoBushImage from '../images/rhino-bush.png';
+
+const showSignUp = false;
 ---
 
 <Layout title="Workout 4 Wildlife">
@@ -21,10 +23,10 @@ import RhinoBushImage from '../images/rhino-bush.png';
     {'🚧 This is a preview. Page is under construction. 🚧'}
   </div>
   <main>
-    <Navigation />
-    <Hero />
+    <Navigation showSignUp={showSignUp} />
+    <Hero showSignUp={showSignUp} />
     <Story />
-    <Join />
+    <Join showSignUp={showSignUp} />
     <Spacer url={CrowdImage} />
     <Prize />
     <Spacer url={RhinoBushImage} />

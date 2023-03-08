@@ -2,6 +2,12 @@
 import Section from './Section.astro';
 import SignUpButton from './SignUpButton';
 import SignUpSteps from './SignUpSteps.astro';
+
+interface Props {
+  showSignUp: boolean;
+}
+
+const { showSignUp }: Props = Astro.props;
 ---
 
 <Section
@@ -11,5 +17,5 @@ import SignUpSteps from './SignUpSteps.astro';
   isGray
 >
   <SignUpSteps />
-  <SignUpButton />
+  {showSignUp && <SignUpButton />}
 </Section>

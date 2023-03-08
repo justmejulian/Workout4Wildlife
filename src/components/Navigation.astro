@@ -9,6 +9,12 @@ const menuItemList = [
   { link: '#prize', title: 'Prize' },
   { link: '#beneficiary', title: 'Beneficiary' },
 ];
+
+interface Props {
+  showSignUp: boolean;
+}
+
+const { showSignUp }: Props = Astro.props;
 ---
 
 <nav id="navigation">
@@ -20,7 +26,7 @@ const menuItemList = [
         <a href={menuItem.link}>{menuItem.title}</a>
       ))
     }
-    <SignUpButton />
+    {showSignUp && <SignUpButton />}
   </div>
   <MobileNavigation menuItemList={menuItemList} client:load />
 </nav>

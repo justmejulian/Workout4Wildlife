@@ -1,5 +1,11 @@
 ---
 import SignUpButton from './SignUpButton';
+
+interface Props {
+  showSignUp: boolean;
+}
+
+const { showSignUp }: Props = Astro.props;
 ---
 
 <div id="hero">
@@ -7,7 +13,7 @@ import SignUpButton from './SignUpButton';
     Win a once-in-a-lifetime trip to Namibia worth $15,000 and experience
     wildlife conservation first hand.
   </p>
-  <SignUpButton />
+  {showSignUp && <SignUpButton />}
 </div>
 
 <style>
