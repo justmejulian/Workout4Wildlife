@@ -1,6 +1,16 @@
 ---
 import Section from './Section.astro';
-import SignUpSteps from './SignUpSteps.astro';
+import NamibiaImage from '../images/namibia.png';
+import PrizeStep from './PrizeStep.astro';
+
+const steps = [
+  { text: 'Drop in at CrossFit Damascus in Windhoek' },
+  { text: 'Visit the world-famous Etosha National Park' },
+  { text: 'Go luxury slackpacking in the heart of Damaraland' },
+  { text: 'Meet SRT and experience conservation work first hand' },
+  { text: 'Surf with seals during a beachside break at Swakopmund' },
+  { text: 'Climb the iconic dunes at Sossusvlei' }
+];
 ---
 
 <Section
@@ -8,5 +18,20 @@ import SignUpSteps from './SignUpSteps.astro';
   title="Grand Prize"
   text={'Our lucky draw will determine the winner of an action-packed once-in-a-lifetime trip to Namibia worth $15,000.'}
 >
-  <SignUpSteps />
+  <div class="trip">
+    <img src={NamibiaImage} alt="Namibia" />
+    <div class="steps-container">
+      {steps.map((step) => <PrizeStep text={step.text} />)}
+    </div>
+  </div>
 </Section>
+
+<style>
+  .trip {
+    display: flex;
+  }
+
+  .steps-container {
+    margin-left: 64px;
+  }
+</style>
