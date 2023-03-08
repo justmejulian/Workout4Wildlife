@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Hamburger from './Hamburger';
+import Hamburger from '@components/Hamburger';
 
 import styles from './MobileNavigation.module.css';
 
