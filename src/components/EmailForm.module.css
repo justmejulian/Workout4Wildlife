@@ -1,0 +1,35 @@
+.form {
+  height: 76px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+}
+.input {
+  width: 454px;
+  height: 58px;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: #767676;
+  font-family: 'Satoshi-Bold';
+  font-weight: 700;
+  font-size: 24px;
+  margin: 9px;
+  margin-left: 28px;
+  padding: 0;
+}
+.submit {
+  width: 226px;
+  height: 58px;
+  background-color: #fe9fab;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Satoshi-Black';
+  font-weight: 900;
+  font-size: 24px;
+  margin: 9px;
+  margin-left: 0;
+  cursor: pointer;
+}
