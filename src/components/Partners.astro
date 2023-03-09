@@ -1,7 +1,83 @@
 ---
 import Section from '@components/Section.astro';
+import SubHeader from '@components/SubHeader.astro';
+
+import Gondwana from '@images/Gondwana.png';
+import Attakk from '@images/Attakk.png';
+import BigSkyLodges from '@images/BigSkyLodges.png';
+import CFDamascus from '@images/CFDamascus.png';
+import CompetitionCorner from '@images/CompetitionCorner.png';
+import Cycletec from '@images/Cycletec.png';
+import MolaMola from '@images/MolaMola.png';
+import NamibaSky from '@images/NamibaSky.png';
+import NaturalSelection from '@images/NaturalSelection.png';
+import SRT from '@images/SRT.png';
+import Viatu from '@images/Viatu.png';
+
+const Partners = [
+  {
+    url: Gondwana,
+    alt: 'Gondwana',
+  },
+  {
+    url: BigSkyLodges,
+    alt: 'BigSkyLodges',
+  },
+  {
+    url: NaturalSelection,
+    alt: 'NaturalSelection',
+  },
+  {
+    url: NamibaSky,
+    alt: 'NamibaSky',
+  },
+  {
+    url: MolaMola,
+    alt: 'MolaMola',
+  },
+  {
+    url: CFDamascus,
+    alt: 'CFDamascus',
+  },
+  {
+    url: Cycletec,
+    alt: 'Cycletec',
+  },
+  {
+    url: Viatu,
+    alt: 'Viatu',
+  },
+  {
+    url: SRT,
+    alt: 'SRT',
+  },
+  {
+    url: CompetitionCorner,
+    alt: 'CompetitionCorner',
+  },
+  {
+    url: Attakk,
+    alt: 'Attakk',
+  },
+];
 ---
 
 <Section id="partners" title="Our Partners">
-  <p>Children</p>
+  <div class="partners-container">
+    {Partners.map((partner) => <img src={partner.url} alt={partner.alt} />)}
+  </div>
+  <SubHeader text="Thank you to all our amazing partners!" />
 </Section>
+
+<style>
+  .partners-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+  }
+  img {
+    padding: 16px;
+  }
+</style>
