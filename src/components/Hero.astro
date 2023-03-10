@@ -45,9 +45,9 @@ const { showSignUp }: Props = Astro.props;
   @media only screen and (max-width: 970px) {
     #hero {
       height: 456px;
-      background: rgba(0, 0, 0, 0.4) url('../images/hero-mobile.png');
-      background-blend-mode: multiply;
-      background-position: center -32px;
+      background: url('../images/hero-mobile.png');
+      background-position: center;
+      background-size: cover;
     }
 
     p {
