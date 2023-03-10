@@ -5,14 +5,16 @@ interface Props {
   id: string;
   title: string;
   text?: string;
+  logo?: string;
   isGray?: boolean;
 }
 
-const { id, title, text, isGray }: Props = Astro.props;
+const { id, title, text, logo, isGray }: Props = Astro.props;
 ---
 
 <div id={id} class:list={[{ gray: isGray }]}>
   <Header text={title} align="center" />
+  {logo && <img src={logo} alt="Logo" />}
   <p>{text}</p>
   <slot />
 </div>
