@@ -4,10 +4,10 @@ import SignUpButton from '@components/SignUpButton';
 import SignUpSteps from '@components/SignUpSteps.astro';
 
 interface Props {
-  showSignUp: boolean;
+  showSignUp?: boolean;
 }
 
-const { showSignUp }: Props = Astro.props;
+const { showSignUp = false }: Props = Astro.props;
 ---
 
 <Section

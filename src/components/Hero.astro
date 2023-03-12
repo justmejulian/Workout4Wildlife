@@ -2,10 +2,10 @@
 import SignUpButton from '@components/SignUpButton';
 
 interface Props {
-  showSignUp: boolean;
+  showSignUp?: boolean;
 }
 
-const { showSignUp }: Props = Astro.props;
+const { showSignUp = false }: Props = Astro.props;
 ---
 
 <div id="hero">

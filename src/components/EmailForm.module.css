@@ -1,64 +1,53 @@
 .form {
-  height: 76px;
   background-color: #f4f4f4;
   border-radius: 10px;
-  margin-top: 48px;
-  margin-bottom: 55px;
+  margin-bottom: calc(var(--base-font-size) * 4);
+  display: flex;
+  padding: calc(var(--base-font-size) * 0.5) var(--base-font-size);
 }
+
 .input {
-  width: 454px;
-  height: 58px;
+  display: block;
+  font-family: 'Satoshi-Regular';
+  font-size: var(--base-font-size);
+  font-weight: 400;
+  color: #767676;
   background-color: #f4f4f4;
   border: none;
   outline: none;
-  border-radius: 10px;
-  color: #767676;
-  font-family: 'Satoshi-Bold';
-  font-weight: 700;
-  font-size: 24px;
-  margin: 9px;
-  margin-left: 28px;
   padding: 0;
+  width: calc(var(--base-font-size) * 17);
 }
+
 .submit {
-  width: 226px;
-  height: 58px;
+  font-family: 'Satoshi-Bold';
+  font-size: var(--base-font-size);
+  font-weight: 700;
+  color: #767676;
   background-color: #fe9fab;
   border: none;
   outline: none;
-  border-radius: 10px;
   color: white;
-  font-family: 'Satoshi-Black';
-  font-weight: 900;
-  font-size: 24px;
-  margin: 9px;
-  margin-left: 0;
   cursor: pointer;
+  padding: calc(var(--base-font-size) * 0.5) calc(var(--base-font-size) * 2);
+  border-radius: 8px;
 }
+
 @media only screen and (max-width: 970px) {
   .form {
-    height: 100px;
-    width: 190px;
-    margin-top: 25px;
-    margin-bottom: 29px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
   }
+
   .input {
-    width: 174px;
     height: 50px;
-    font-size: 12px;
-    font-weight: 400;
-    font-family: 'Satoshi-Regular';
+    width: calc(var(--base-font-size) * 10);
     margin: 0;
-    padding: 0 8px;
+    padding-bottom: 8px;
     text-align: center;
   }
-  .submit {
-    width: 190px;
-    height: 50px;
-    margin: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
+
   ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     white-space: pre-line;
@@ -82,5 +71,13 @@
     white-space: pre-line;
     position: relative;
     top: -6px;
+  }
+
+  .submit {
+    width: 100%;
+    margin: 0;
+    padding: calc(var(--base-font-size) * 1) calc(var(--base-font-size) * 2);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 }

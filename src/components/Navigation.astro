@@ -11,10 +11,10 @@ const menuItemList = [
 ];
 
 interface Props {
-  showSignUp: boolean;
+  showSignUp?: boolean;
 }
 
-const { showSignUp }: Props = Astro.props;
+const { showSignUp = false }: Props = Astro.props;
 ---
 
 <nav id="navigation">
