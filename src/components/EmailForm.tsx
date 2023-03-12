@@ -19,7 +19,7 @@ function EmailForm() {
         className={styles.input}
       />
       <button type="submit" className={styles.submit}>
-        Subscribe Now
+        Subscribe
       </button>
     </form>
   );
