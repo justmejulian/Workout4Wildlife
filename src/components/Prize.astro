@@ -2,15 +2,6 @@
 import Section from '@components/Section.astro';
 import NamibiaImage from '@images/namibia.png';
 import PrizeStep from '@components/PrizeStep.astro';
-
-const steps = [
-  { text: 'Drop in at CrossFit Damascus in Windhoek' },
-  { text: 'Visit the world-famous Etosha National Park' },
-  { text: 'Go luxury slackpacking in the heart of Damaraland' },
-  { text: 'Meet SRT and experience conservation work first hand' },
-  { text: 'Surf with seals during a beachside break at Swakopmund' },
-  { text: 'Climb the iconic dunes at Sossusvlei' },
-];
 ---
 
 <Section
@@ -21,33 +12,55 @@ const steps = [
   <div class="trip">
     <img src={NamibiaImage} alt="Namibia" />
     <div class="steps-container">
-      {steps.map((step) => <PrizeStep text={step.text} />)}
+      <PrizeStep>
+        {'Drop in at '}<b>CrossFit Damascus</b>{' in Windhoek'}
+      </PrizeStep>
+      <PrizeStep>
+        {'Visit the world-famous '}<b>Etosha National Park</b>
+      </PrizeStep>
+      <PrizeStep>
+        <b>Go luxury slackpacking</b>{' in the heart of Damaraland'}
+      </PrizeStep>
+      <PrizeStep>
+        <b>Meet SRT</b>{' and experience conservation work first hand'}
+      </PrizeStep>
+      <PrizeStep>
+        <b>Surf with seals</b>{' during a beachside break at Swakopmund'}
+      </PrizeStep>
+      <PrizeStep>
+        <b>Climb the iconic dunes at Sossusvlei</b>
+      </PrizeStep>
     </div>
   </div>
-</Section>
 
-<style>
-  .trip {
-    display: flex;
-  }
-
-  .steps-container {
-    margin-left: calc(var(--margin) * 2);
-  }
-
-  @media only screen and (max-width: 970px) {
+  <style>
     .trip {
-      flex-direction: column;
-      align-items: center;
+      display: flex;
     }
 
     .steps-container {
-      margin-left: 0px;
+      margin-left: calc(var(--margin) * 2);
     }
 
-    img {
-      width: calc(var(--margin) * 4);
-      margin-bottom: var(--margin);
+    b {
+      font-family: 'Satoshi-Bold';
+      font-weight: 700;
     }
-  }
-</style>
+
+    @media only screen and (max-width: 970px) {
+      .trip {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .steps-container {
+        margin-left: 0px;
+      }
+
+      img {
+        width: calc(var(--margin) * 4);
+        margin-bottom: var(--margin);
+      }
+    }
+  </style>
+</Section>

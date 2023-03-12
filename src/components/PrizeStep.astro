@@ -1,11 +1,5 @@
 ---
 import DottedLineVertical from '@components/DottedLineVertical.astro';
-
-export interface Props {
-  text: string;
-}
-
-const { text } = Astro.props;
 ---
 
 <div class="container">
@@ -14,7 +8,7 @@ const { text } = Astro.props;
     <div class="dot"></div>
     <DottedLineVertical visible={true} />
   </div>
-  <div class="text">{text}</div>
+  <div class="text"><slot /></div>
 </div>
 
 <style>
