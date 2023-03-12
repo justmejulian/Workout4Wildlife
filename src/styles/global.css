@@ -5,42 +5,42 @@
 }
 
 html {
-    font-family: 'Satoshi-Regular', sans-serif;
+  font-family: 'Satoshi-Regular', sans-serif;
 }
 
 h1 {
-    font-family: 'KronaOne-Regular';
-    font-style: normal;
-    font-weight: 400;
-    font-size: calc(var(--base-font-size) * 2);
-    color: #541736;
-    margin: 0px;
-    margin-bottom: calc(var(--base-font-size) * 2); 
+  font-family: 'KronaOne-Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(var(--base-font-size) * 2);
+  color: #541736;
+  margin: 0px;
+  margin-bottom: calc(var(--base-font-size) * 2);
 }
 
 h2 {
-    font-family: 'Caveat-Bold';
-    font-size: calc(var(--base-font-size) * 2);
-    font-weight: 700;
-    letter-spacing: 0em;
-    color: #541736;
-    margin: 0px;
+  font-family: 'Caveat-Bold';
+  font-size: calc(var(--base-font-size) * 2);
+  font-weight: 700;
+  letter-spacing: 0em;
+  color: #541736;
+  margin: 0px;
 }
 
 h3 {
-    font-family: 'Satoshi-Bold';
-    font-size: calc(var(--base-font-size) * 1.5);
-    font-weight: 700;
-    color: #541736;
-    letter-spacing: 0em;
-    margin: 0px;
-    margin-bottom: calc(var(--base-font-size) * 2); 
+  font-family: 'Satoshi-Bold';
+  font-size: calc(var(--base-font-size) * 1.5);
+  font-weight: 700;
+  color: #541736;
+  letter-spacing: 0em;
+  margin: 0px;
+  margin-bottom: calc(var(--base-font-size) * 2);
 }
 
 p {
-    font-family: 'Satoshi-Regular';
-    font-style: normal;
-    font-weight: 500;
-    font-size: var(--base-font-size);
-    color: #767676;
+  font-family: 'Satoshi-Regular';
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--base-font-size);
+  color: #767676;
 }
