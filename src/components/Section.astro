@@ -1,6 +1,4 @@
 ---
-import Header from '@components/Header.astro';
-
 interface Props {
   id: string;
   title: string;
@@ -13,7 +11,7 @@ const { id, title, text, logo, isGray }: Props = Astro.props;
 ---
 
 <div id={id} class:list={[{ gray: isGray }]}>
-  <Header text={title} align="center" />
+  <h1>{title}</h1>
   {logo && <img src={logo} alt="Logo" />}
   <p>{text}</p>
   <slot />
@@ -28,11 +26,15 @@ const { id, title, text, logo, isGray }: Props = Astro.props;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    padding: 60px 200px;
+    padding: var(--padding-side) var(--padding-side);
+  }
+
+  h1 {
+    text-align: center;
   }
 
   img {
-    margin-top: 40px;
+    margin-bottom: var(--margin);
   }
 
   .gray {

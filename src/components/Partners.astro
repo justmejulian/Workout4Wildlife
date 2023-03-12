@@ -1,6 +1,5 @@
 ---
 import Section from '@components/Section.astro';
-import SubHeader from '@components/SubHeader.astro';
 
 import Gondwana from '@images/Gondwana.png';
 import Attakk from '@images/Attakk.png';
@@ -66,7 +65,6 @@ const Partners = [
   <div class="partners-container">
     {Partners.map((partner) => <img src={partner.url} alt={partner.alt} />)}
   </div>
-  <SubHeader text="Thank you to all our amazing partners!" />
 </Section>
 
 <style>

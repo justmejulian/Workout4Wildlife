@@ -1,87 +1,46 @@
-@font-face {
-  font-family: 'Satoshi-Light';
-  src: url('/fonts/Satoshi-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-display: swap;
-  font-style: normal;
+:root {
+  --base-font-size: 16px;
+  --margin: calc(var(--base-font-size) * 2);
+  --padding-side: calc(var(--base-font-size) * 4);
 }
 
-@font-face {
-  font-family: 'Satoshi-LightItalic';
-  src: url('/fonts/Satoshi-LightItalic.ttf') format('truetype');
-  font-weight: 300;
-  font-display: swap;
-  font-style: italic;
+html {
+    font-family: 'Satoshi-Regular', sans-serif;
 }
 
-@font-face {
-  font-family: 'Satoshi-Regular';
-  src: url('/fonts/Satoshi-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
+h1 {
+    font-family: 'KronaOne-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(var(--base-font-size) * 2);
+    color: #541736;
+    margin: 0px;
+    margin-bottom: calc(var(--base-font-size) * 2); 
 }
 
-@font-face {
-  font-family: 'Satoshi-Italic';
-  src: url('/fonts/Satoshi-Italic.ttf') format('truetype');
-  font-weight: 400;
-  font-display: swap;
-  font-style: italic;
+h2 {
+    font-family: 'Caveat-Bold';
+    font-size: calc(var(--base-font-size) * 2);
+    font-weight: 700;
+    letter-spacing: 0em;
+    color: #541736;
+    margin: 0px;
 }
 
-@font-face {
-  font-family: 'Satoshi-Medium';
-  src: url('/fonts/Satoshi-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
+h3 {
+    font-family: 'Satoshi-Bold';
+    font-size: calc(var(--base-font-size) * 1.5);
+    font-weight: 700;
+    color: #541736;
+    letter-spacing: 0em;
+    margin: 0px;
+    margin-bottom: calc(var(--base-font-size) * 2); 
 }
 
-@font-face {
-  font-family: 'Satoshi-MediumItalic';
-  src: url('/fonts/Satoshi-MediumItalic.ttf') format('truetype');
-  font-weight: 500;
-  font-display: swap;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Satoshi-Bold';
-  src: url('/fonts/Satoshi-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Satoshi-BoldItalic';
-  src: url('/fonts/Satoshi-BoldItalic.ttf') format('truetype');
-  font-weight: 700;
-  font-display: swap;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Satoshi-Black';
-  src: url('/fonts/Satoshi-Black.ttf') format('truetype');
-  font-weight: 900;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Satoshi-BlackItalic';
-  src: url('/fonts/Satoshi-BlackItalic.ttf') format('truetype');
-  font-weight: 900;
-  font-display: swap;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'KronaOne-Regular';
-  src: url('/fonts/KronaOne-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
+p {
+    font-family: 'Satoshi-Regular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--base-font-size);
+    color: #767676;
 }
