@@ -18,11 +18,10 @@
   font-family: 'KronaOne-Regular';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 30px;
-  color: #fe9fab;
+  font-size: calc(var(--base-font-size) * 2);
+  color: #ffffff;
   text-decoration: none;
-  padding: 40px;
+  padding: calc(var(--base-font-size) * 2);
 }
 
 @media only screen and (max-width: 970px) {
