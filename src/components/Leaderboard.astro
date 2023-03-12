@@ -3,17 +3,10 @@ import Section from '@components/Section.astro';
 import LinkButton from './LinkButton';
 ---
 
-<Section id="leaderboard" title="Leaderboard" isGray>
-  <p>Event will be hosted by Competition Corner.</p>
+<Section id="leaderboard" title="Leaderboard" isGray text="Event will be hosted by Competition Corner."}>
   <LinkButton
-    title="VISIT CompetitionCorner"
+    title="Visit Competition Corner"
     url="https://competitioncorner.net"
     client:load
   />
 </Section>
-
-<style>
-  p {
-    margin-bottom: 40px;
-  }
-</style>

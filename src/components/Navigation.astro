@@ -34,9 +34,9 @@ const { showSignUp }: Props = Astro.props;
 <style>
   #navigation {
     box-sizing: border-box;
-    padding: 20px 120px;
+    padding: var(--base-font-size) var(--padding-side);
     width: 100%;
-    height: 100px;
+    height: calc(var(--base-font-size) * 5);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,16 +44,13 @@ const { showSignUp }: Props = Astro.props;
 
   a {
     position: relative;
-    font-family: 'Satoshi-Black';
+    font-family: 'Satoshi-Bold';
     font-style: normal;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 27px;
+    font-weight: 700;
+    font-size: var(--base-font-size);
     color: #541736;
-
-    margin-right: 40px;
-
     text-decoration: none;
+    margin-right: calc(var(--base-font-size) * 2);
   }
 
   a:hover {
@@ -70,12 +67,6 @@ const { showSignUp }: Props = Astro.props;
     left: 0px;
     right: 0px;
     margin: auto;
-  }
-
-  @media (max-width: 1200px) {
-    #navigation {
-      padding: 20px 40px;
-    }
   }
 
   @media only screen and (max-width: 970px) {

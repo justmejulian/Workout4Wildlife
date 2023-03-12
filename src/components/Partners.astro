@@ -73,9 +73,19 @@ const Partners = [
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding-bottom: 60px;
+    margin-bottom: calc(var(--base-font-size) * 2);
+    max-width: calc(var(--base-font-size) * 60);
   }
+
   img {
-    padding: 16px;
+    padding: var(--base-font-size);
+    margin-bottom: var(--base-font-size);
+  }
+
+  @media only screen and (max-width: 970px) {
+    img {
+      padding: calc(var(--base-font-size) * 0.5);
+      margin-bottom: 0px;
+    }
   }
 </style>

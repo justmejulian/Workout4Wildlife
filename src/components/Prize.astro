@@ -32,7 +32,7 @@ const steps = [
   }
 
   .steps-container {
-    margin-left: 64px;
+    margin-left: calc(var(--margin) * 2);
   }
 
   @media only screen and (max-width: 970px) {
@@ -41,9 +41,13 @@ const steps = [
       align-items: center;
     }
 
+    .steps-container {
+      margin-left: 0px;
+    }
+
     img {
-      width: 92px;
-      margin-bottom: 20px;
+      width: calc(var(--margin) * 4);
+      margin-bottom: var(--margin);
     }
   }
 </style>

@@ -6,7 +6,7 @@ function SignUpButton() {
       onClick={() => {
         console.log('Button Clicked');
       }}
-      title="SIGN UP NOW"
+      title="Sign Up Now"
     />
   );
 }

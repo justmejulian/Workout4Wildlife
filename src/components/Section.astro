@@ -42,35 +42,15 @@ const { id, title, text, logo, isGray }: Props = Astro.props;
   }
 
   p {
-    margin-top: 40px;
-    font-family: 'Satoshi-Medium';
-    font-weight: 500;
-    font-size: 25px;
-    line-height: 34px;
+    margin-top: 0px;
+    margin-bottom: calc(var(--margin) * 2);
     text-align: center;
-    color: #767676;
-  }
-
-  @media (max-width: 1200px) {
-    div {
-      padding: 60px 40px;
-    }
-  }
-
-  @media (max-width: 1200px) {
-    #navigation {
-      padding: 20px 40px;
-    }
+    max-width: calc(var(--base-font-size) * 40);
   }
 
   @media only screen and (max-width: 970px) {
-    div {
-      padding: 30px 40px;
-    }
-
     p {
       text-align: center;
-      font-size: 16px;
     }
   }
 </style>

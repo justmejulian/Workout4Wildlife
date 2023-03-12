@@ -30,13 +30,17 @@ const { text } = Astro.props;
   }
 
   .text {
-    margin-left: 32px;
+    margin-left: var(--margin);
+    font-size: var(--base-font-size);
+    color: #767676;
+    font-family: 'Satoshi-Regular', sans-serif;
+    font-weight: 500;
   }
 
   .dot {
-    width: 16px;
-    height: 16px;
-    background: #fe9fab;
+    height: var(--base-font-size);
+    width: var(--base-font-size);
+    background: #541736;
     border-radius: 50px;
   }
 </style>

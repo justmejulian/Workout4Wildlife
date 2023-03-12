@@ -1,12 +1,10 @@
 ---
-import Header from '@components/Header.astro';
 import StoryImage from '@images/story.png';
-import SubHeader from '@components/SubHeader.astro';
 ---
 
 <div id="story">
   <div class="text">
-    <Header text="Our story" align="left" />
+    <h1>{'Our Story'}</h1>
     <p>
       Workout4Wildlife was born out of a passion for fitness and wildlife
       conservation. In 2022, we went on a bike ride across Namibia, one of the
@@ -22,7 +20,7 @@ import SubHeader from '@components/SubHeader.astro';
       Upon our return, we founded W4W. Our goal is to leverage the fitness
       community to raise funds for wildlife conservation projects globally.
     </p>
-    <SubHeader text="Alfredo, Guido, Julian & Lukas" />
+    <h2>Alfredo, Guido, Julian & Lukas</h2>
   </div>
   <img src={StoryImage} alt="Our Story" />
 </div>
@@ -32,44 +30,48 @@ import SubHeader from '@components/SubHeader.astro';
     box-sizing: border-box;
     width: 100%;
     display: flex;
+    justify-content: center;
     overflow: hidden;
-    padding: 60px 120px;
+    padding: var(--padding-side) var(--padding-side);
+  }
+
+  h1 {
+    text-align: left;
+  }
+
+  h2 {
+    margin-top: calc(var(--margin) * 2);
   }
 
   .text {
-    margin-top: 30px;
-    margin-right: 50px;
+    margin-top: var(--margin);
+    margin-right: calc(var(--margin) * 2);
+    max-width: calc(var(--base-font-size) * 50);
   }
 
   p {
-    font-family: 'Satoshi-Regular';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 25px;
-    line-height: 34px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    color: #767676;
+    margin: var(--margin) 0px;
   }
 
   img {
-    max-width: 592px;
     width: 40%;
-    height: 672px;
+    max-width: calc(var(--base-font-size) * 25);
     object-fit: scale-down;
-  }
-
-  @media (max-width: 1200px) {
-    #story {
-      padding: 60px 40px;
-    }
   }
 
   @media only screen and (max-width: 970px) {
     #story {
       flex-direction: column;
       align-items: center;
-      padding: 30px 40px;
+    }
+
+    h1,
+    h2 {
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: var(--margin);
     }
 
     .text {
@@ -79,12 +81,10 @@ import SubHeader from '@components/SubHeader.astro';
 
     p {
       text-align: center;
-      font-size: 16px;
     }
 
     img {
-      width: 292px;
-      height: 332px;
+      min-width: 292px;
     }
   }
 </style>
