@@ -1,6 +1,7 @@
 ---
 import LinkButton from '@components/LinkButton';
 import Section from '@components/Section.astro';
+import EmailForm from './EmailForm';
 ---
 
 <Section
@@ -8,5 +9,6 @@ import Section from '@components/Section.astro';
   title="About Viatu"
   text={'Viatu is a tech-enabled travel company promoting sustainability and transparency in travel. We are incredibly proud to be the travel partner for Workout4Wildlife.'}
 >
+  <EmailForm client:load />
   <LinkButton title="Visti Viatu" url="http://www.viatu.com" client:load />
 </Section>
