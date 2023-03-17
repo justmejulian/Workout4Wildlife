@@ -9,11 +9,19 @@ const { showSignUp = false }: Props = Astro.props;
 ---
 
 <div id="hero">
-  <p>
-    Win a once-in-a-lifetime trip to Namibia worth $15,000 and experience
-    wildlife conservation first hand.
+  <p class="prize">
+    {'Win a '}<span>{'$15,000 '}</span>{
+      ' trip to Namibia* and experience conservation'
+    }
+    <br />
+    {' first hand.'}
   </p>
   {showSignUp && <SignUpButton />}
+  <p class="dates">
+    {'Submit workout '}<span>{'April 23'}</span>
+    <br />
+    {'Participation fee '}<span>{'$20'}</span>
+  </p>
 </div>
 
 <style>
@@ -23,7 +31,6 @@ const { showSignUp = false }: Props = Astro.props;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     overflow: hidden;
 
@@ -33,15 +40,19 @@ const { showSignUp = false }: Props = Astro.props;
   }
 
   p {
-    font-family: 'Satoshi-Bold';
+    font-family: 'Satoshi-Regular';
     font-size: calc(var(--base-font-size) * 2);
-    font-weight: 700;
-    letter-spacing: 0em;
-    margin: 0px;
-    max-width: calc(var(--base-font-size) * 30);
+    max-width: calc(var(--base-font-size) * 32);
     text-align: center;
     color: #ffffff;
-    margin-bottom: calc(var(--base-font-size) * 5);
+    margin: calc(var(--base-font-size) * 4) 0px;
+  }
+
+  span {
+    font-family: 'Caveat-Bold';
+    font-weight: 700;
+    font-size: calc(var(--base-font-size) * 4);
+    color: #fee878;
   }
 
   @media only screen and (max-width: 970px) {
@@ -50,6 +61,25 @@ const { showSignUp = false }: Props = Astro.props;
       background: url('../images/hero-mobile.png');
       background-position: center;
       background-size: cover;
+    }
+
+    p {
+      font-size: calc(var(--base-font-size) * 1);
+      max-width: calc(var(--base-font-size) * 20);
+      margin: calc(var(--base-font-size) * 3) 0px;
+    }
+
+    span {
+      font-size: calc(var(--base-font-size) * 2);
+    }
+
+    .prize {
+      order: -2;
+    }
+
+    .dates {
+      order: -1;
+      margin-top: 0px;
     }
   }
 </style>
