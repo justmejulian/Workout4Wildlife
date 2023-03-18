@@ -12,12 +12,15 @@ function EmailForm() {
 
   return (
     <form className={styles.form} method="post" onSubmit={handleSubmit}>
-      <input
-        name="email"
-        type="text"
-        placeholder="Enter your email for Viatu Newsletter"
-        className={styles.input}
-      />
+      <div className={styles.inputgroup}>
+        <input
+          name="email"
+          type="text"
+          className={styles.input}
+          required
+        />
+        <p className={styles.placeholder}>Enter your email for Viatu Newsletter</p>
+      </div>
       <button type="submit" className={styles.submit}>
         Subscribe
       </button>
