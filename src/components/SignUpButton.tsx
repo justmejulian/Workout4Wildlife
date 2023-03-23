@@ -4,7 +4,9 @@ function SignUpButton() {
   return (
     <Button
       onClick={() => {
-        console.log('Button Clicked');
+        window
+          .open('https://competitioncorner.net/events/9736', '_blank')
+          ?.focus();
       }}
       title="Sign Up Now"
     />
