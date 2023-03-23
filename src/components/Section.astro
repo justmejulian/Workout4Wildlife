@@ -10,7 +10,8 @@ interface Props {
 const { id, title, text, logo, isGray }: Props = Astro.props;
 ---
 
-<div id={id} class:list={[{ gray: isGray }]}>
+<div class:list={['container', { gray: isGray }]}>
+  <div id={id} class="anchor"></div>
   <h1>{title}</h1>
   {logo && <img src={logo} alt="Logo" />}
   <p>{text}</p>
@@ -18,7 +19,7 @@ const { id, title, text, logo, isGray }: Props = Astro.props;
 </div>
 
 <style>
-  div {
+  .container {
     box-sizing: border-box;
     width: 100%;
     display: flex;
@@ -27,6 +28,14 @@ const { id, title, text, logo, isGray }: Props = Astro.props;
     align-items: center;
     overflow: hidden;
     padding: var(--padding-side) var(--padding-side);
+  }
+
+  /* Hack to offset floating navigation */
+  /* place this with id above actual div */
+  /* otherwise nav covers div */
+  .anchor {
+    position: relative;
+    top: -100px;
   }
 
   h1 {
