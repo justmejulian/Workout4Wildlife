@@ -1,14 +1,10 @@
-import Button from '@components/Button';
+import LinkButton from '@components/LinkButton';
 
 function SignUpButton() {
   return (
-    <Button
-      onClick={() => {
-        window
-          .open('https://competitioncorner.net/events/9736', '_blank')
-          ?.focus();
-      }}
+    <LinkButton
       title="Sign Up Now"
+      url="https://competitioncorner.net/events/9736"
     />
   );
 }
