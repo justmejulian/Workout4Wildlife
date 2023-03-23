@@ -16,7 +16,7 @@ const { showSignUp = false }: Props = Astro.props;
     <br />
     {' first hand.'}
   </p>
-  {showSignUp && <SignUpButton />}
+  {showSignUp && <SignUpButton client:load />}
   <p class="dates">
     {'Submit workout '}<span>{'April 23'}</span>
     <br />

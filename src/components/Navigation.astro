@@ -26,7 +26,7 @@ const { showSignUp = false }: Props = Astro.props;
         <a href={menuItem.link}>{menuItem.title}</a>
       ))
     }
-    {showSignUp && <SignUpButton />}
+    {showSignUp && <SignUpButton client:load />}
   </div>
   <MobileNavigation menuItemList={menuItemList} client:load />
 </nav>

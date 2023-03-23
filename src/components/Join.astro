@@ -17,5 +17,5 @@ const { showSignUp = false }: Props = Astro.props;
   isGray
 >
   <SignUpSteps />
-  {showSignUp && <SignUpButton />}
+  {showSignUp && <SignUpButton client:load />}
 </Section>
