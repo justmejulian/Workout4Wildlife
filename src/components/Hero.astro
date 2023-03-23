@@ -22,6 +22,9 @@ const { showSignUp = false }: Props = Astro.props;
     <br />
     {'Participation fee '}<span>{'$20'}</span>
   </p>
+  <p class="tcs">
+    {'*T&Cs apply'}
+  </p>
 </div>
 
 <style>
@@ -48,6 +51,15 @@ const { showSignUp = false }: Props = Astro.props;
     margin: calc(var(--base-font-size) * 4) 0px;
   }
 
+  .dates {
+    margin-bottom: calc(var(--base-font-size) * 2);
+  }
+
+  .tcs {
+    margin: 0px;
+    font-size: var(--base-font-size);
+  }
+
   span {
     font-family: 'Caveat-Bold';
     font-weight: 700;
@@ -66,7 +78,6 @@ const { showSignUp = false }: Props = Astro.props;
     p {
       font-size: calc(var(--base-font-size) * 1);
       max-width: calc(var(--base-font-size) * 20);
-      margin: calc(var(--base-font-size) * 3) 0px;
     }
 
     span {
@@ -75,11 +86,18 @@ const { showSignUp = false }: Props = Astro.props;
 
     .prize {
       order: -2;
+      margin: calc(var(--base-font-size) * 3) 0px;
     }
 
     .dates {
       order: -1;
       margin-top: 0px;
+      margin-bottom: calc(var(--base-font-size) * 4);
     }
+
+    .tcs {
+      margin-top: calc(var(--base-font-size) * 3);
+    }
+
   }
 </style>
