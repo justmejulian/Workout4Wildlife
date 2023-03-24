@@ -1,0 +1,38 @@
+---
+import Section from '@components/Section.astro';
+import PrizeStops from '@components/PrizeStops';
+
+import NamibaSkyCover from '@images/NamibaSkyCover.jpeg';
+import NamibaSkyLogo from '@images/NamibaSky.png';
+import NaturalSelectionLogo from '@images/NaturalSelection.png';
+import NaturalSelectionCover from '@images/NaturalSelectionCover.jpeg';
+
+const stops = [
+  {
+    title: 'Namibia Sky Balloon Safaris',
+    text: ' Soar over the panoramic Namibian desert for sunrise on the flight of a lifetime before landing for champagne breakfast.',
+    logo: NamibaSkyLogo,
+    cover: NamibaSkyCover,
+  },
+  {
+    title: 'Kwessi Dunes Natural Selection',
+    text: 'An unforgettable desert experience amidst orange dunes, a star gazer room, a campfire, a pool, and never-ending views.',
+    logo: NaturalSelectionLogo,
+    cover: NaturalSelectionCover,
+  },
+  {
+    title: 'Namibia Sky Balloon Safaris',
+    text: ' Soar over the panoramic Namibian desert for sunrise on the flight of a lifetime before landing for champagne breakfast.',
+    logo: NamibaSkyLogo,
+    cover: NamibaSkyCover,
+  },
+];
+---
+
+<Section
+  id="prize"
+  title="Grand Prize"
+  text={'Our lucky draw will determine the winner of an action-packed once-in-a-lifetime trip to Namibia worth $15,000.'}
+>
+  <PrizeStops stops={stops} client:visible/>
+</Section>
