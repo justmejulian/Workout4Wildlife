@@ -6,6 +6,7 @@ import NamibaSkyCover from '@images/NamibaSkyCover.jpeg';
 import NamibaSkyLogo from '@images/NamibaSky.png';
 import NaturalSelectionLogo from '@images/NaturalSelection.png';
 import NaturalSelectionCover from '@images/NaturalSelectionCover.jpeg';
+import Rhino from '@images/rhino-bush.png';
 
 const stops = [
   {
@@ -24,7 +25,7 @@ const stops = [
     title: 'Namibia Sky Balloon Safaris',
     text: ' Soar over the panoramic Namibian desert for sunrise on the flight of a lifetime before landing for champagne breakfast.',
     logo: NamibaSkyLogo,
-    cover: NamibaSkyCover,
+    cover: Rhino,
   },
 ];
 ---
@@ -34,5 +35,5 @@ const stops = [
   title="Grand Prize"
   text={'Our lucky draw will determine the winner of an action-packed once-in-a-lifetime trip to Namibia worth $15,000.'}
 >
-  <PrizeStops stops={stops} client:visible/>
+  <PrizeStops stops={stops} client:visible />
 </Section>
