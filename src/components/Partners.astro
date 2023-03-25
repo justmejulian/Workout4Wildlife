@@ -79,12 +79,17 @@ const Partners = [
   img {
     padding: var(--base-font-size);
     margin-bottom: var(--base-font-size);
+    height: calc(var(--base-font-size) * 6);
+    max-width: calc(var(--base-font-size) * 10);
+    object-fit: contain;
   }
 
   @media only screen and (max-width: 970px) {
     img {
-      padding: calc(var(--base-font-size) * 0.3);
+      padding: calc(var(--base-font-size) * 0.5);
       margin-bottom: 0px;
+      height: calc(var(--base-font-size) * 4);
+      max-width: calc(var(--base-font-size) * 7);
     }
   }
 </style>
