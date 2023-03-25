@@ -43,6 +43,9 @@ const { id, title, text, logo, isGray }: Props = Astro.props;
   }
 
   img {
+    height: calc(var(--margin) * 4);
+    max-width: calc(var(--margin) * 8);
+    object-fit: contain;
     margin-bottom: var(--margin);
   }
 
