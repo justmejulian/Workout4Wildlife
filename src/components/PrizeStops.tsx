@@ -19,7 +19,7 @@ function PrizeStops({ stops }: PrizeStopsProps) {
         slidesPerView={1}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
-        pagination
+        pagination={{ clickable: true }}
         loop
       >
         {stops.map((stop) => (
