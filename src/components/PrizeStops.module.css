@@ -1,8 +1,6 @@
-.dotContainer {
-  margin-top: var(--margin);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container {
+  width: calc(var(--base-font-size) * 55);
+  position: relative;
 }
 
 .dot {
@@ -14,6 +12,12 @@
   cursor: pointer;
 }
 
-.dot.selected {
-  background: #541736;
+.swiper-pagination-bullet-active > .dot {
+  background: #007aff;
+}
+
+@media only screen and (max-width: 970px) {
+  .container {
+    width: 100%;
+  }
 }

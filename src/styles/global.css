@@ -2,6 +2,11 @@
   --base-font-size: 16px;
   --margin: calc(var(--base-font-size) * 2);
   --padding-side: calc(var(--base-font-size) * 4);
+
+  --swiper-pagination-color: #541736;
+  --swiper-pagination-bullet-inactive-color: #767676;
+  --swiper-pagination-bullet-size: calc(var(--base-font-size) * 1);
+  --swiper-pagination-bullet-horizontal-gap: 4px;
 }
 
 html {
@@ -43,4 +48,12 @@ p {
   font-weight: 500;
   font-size: var(--base-font-size);
   color: #767676;
+}
+
+.swiper
+  > .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  margin-top: var(--margin);
 }
