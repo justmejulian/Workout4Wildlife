@@ -1,0 +1,66 @@
+---
+import Section from '@components/Section.astro';
+import NamibiaImage from '@images/namibia.png';
+import PrizeStep from '@components/PrizeStep.astro';
+---
+
+<Section
+  id="prize"
+  title="Grand Prize"
+  text={'Our lucky draw will determine the winner of an action-packed once-in-a-lifetime trip to Namibia worth $15,000.'}
+>
+  <div class="trip">
+    <img src={NamibiaImage} alt="Namibia" />
+    <div class="steps-container">
+      <PrizeStep>
+        {'Drop in at '}<b>CrossFit Damascus</b>{' in Windhoek'}
+      </PrizeStep>
+      <PrizeStep>
+        {'Visit the world-famous '}<b>Etosha National Park</b>
+      </PrizeStep>
+      <PrizeStep>
+        <b>Go luxury slackpacking</b>{' in the heart of Damaraland'}
+      </PrizeStep>
+      <PrizeStep>
+        <b>Meet SRT</b>{' and experience conservation work first hand'}
+      </PrizeStep>
+      <PrizeStep>
+        <b>Surf with seals</b>{' during a beachside break at Swakopmund'}
+      </PrizeStep>
+      <PrizeStep>
+        <b>Climb the iconic dunes at Sossusvlei</b>
+      </PrizeStep>
+    </div>
+  </div>
+
+  <style>
+    .trip {
+      display: flex;
+    }
+
+    .steps-container {
+      margin-left: calc(var(--margin) * 2);
+    }
+
+    b {
+      font-family: 'Satoshi-Bold';
+      font-weight: 700;
+    }
+
+    @media only screen and (max-width: 970px) {
+      .trip {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .steps-container {
+        margin-left: 0px;
+      }
+
+      img {
+        width: calc(var(--margin) * 4);
+        margin-bottom: var(--margin);
+      }
+    }
+  </style>
+</Section>
