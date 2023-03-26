@@ -32,7 +32,6 @@ const { showSignUp = false }: Props = Astro.props;
 <style>
   #hero {
     width: 100%;
-    height: calc(var(--base-font-size) * 45);
 
     display: flex;
     flex-direction: column;
@@ -60,6 +59,7 @@ const { showSignUp = false }: Props = Astro.props;
   .tcs {
     margin: 0px;
     font-size: var(--base-font-size);
+    margin-bottom: calc(var(--base-font-size) * 0.5);
   }
 
   span {
@@ -71,7 +71,6 @@ const { showSignUp = false }: Props = Astro.props;
 
   @media only screen and (max-width: 970px) {
     #hero {
-      height: 456px;
       background: url('../images/hero-mobile.png');
       background-position: center;
       background-size: cover;
