@@ -3,6 +3,9 @@
 
 <footer id="footer">
   <div class="link-container">
+    <a href="/Workout4Wildlife-Terms&Conditions-20230328.pdf" target="_blank"
+      >Terms & Conditions</a
+    >
     <span>© Workout4Wildlife 2023</span>
   </div>
 </footer>
@@ -17,6 +20,21 @@
     color: #ffffff;
   }
 
+  .link-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
   @media (max-width: 1200px) {
     #footer {
       padding: 20px 40px;
@@ -26,6 +44,15 @@
   @media only screen and (max-width: 970px) {
     #footer {
       padding: 20px 20px;
+    }
+
+    .link-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    a {
+      margin-bottom: var(--base-font-size);
     }
   }
 </style>
