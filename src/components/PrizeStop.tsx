@@ -1,4 +1,3 @@
-import cls from 'classnames';
 import styles from './PrizeStop.module.css';
 
 export interface Stop {
@@ -14,7 +13,7 @@ interface PrizeStopProps {
 
 function PrizeStop({ stop }: PrizeStopProps) {
   return (
-    <div className={cls(styles.stop, styles.animate)}>
+    <div className={styles.stop}>
       <img
         className={styles.cover}
         src={stop.cover}

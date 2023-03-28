@@ -3,19 +3,6 @@
   position: relative;
 }
 
-.dot {
-  height: var(--base-font-size);
-  width: var(--base-font-size);
-  margin-left: var(--base-font-size);
-  background: #d9d9d9;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.swiper-pagination-bullet-active > .dot {
-  background: #007aff;
-}
-
 @media only screen and (max-width: 970px) {
   .container {
     width: 100%;
