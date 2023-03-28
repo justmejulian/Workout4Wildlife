@@ -63,7 +63,7 @@ const Partners = [
 
 <Section id="partners" title="Our Partners">
   <div class="partners-container">
-    {Partners.map((partner) => <img src={partner.url} alt={partner.alt} />)}
+    {Partners.map((partner) => <img src={partner.url} alt={partner.alt} loading="lazy"/>)}
   </div>
 </Section>
 

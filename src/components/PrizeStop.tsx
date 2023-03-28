@@ -18,12 +18,14 @@ function PrizeStop({ stop }: PrizeStopProps) {
         className={styles.cover}
         src={stop.cover}
         alt={stop.title + ' cover'}
+        loading="lazy"
       />
       <div className={styles.description}>
         <img
           className={styles.logo}
           src={stop.logo}
           alt={stop.title + ' logo'}
+          loading="lazy"
         />
         <p className={styles.title}>{stop.title}</p>
         <p>{stop.text}</p>

@@ -13,7 +13,7 @@ const { id, title, text, logo, isGray }: Props = Astro.props;
 <div class:list={['container', { gray: isGray }]}>
   <div id={id} class="anchor"></div>
   <h1>{title}</h1>
-  {logo && <img src={logo} alt="Logo" />}
+  {logo && <img src={logo} alt="Logo" loading="lazy"/>}
   <p>{text}</p>
   <slot />
 </div>
