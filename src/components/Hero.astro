@@ -24,9 +24,13 @@ const { showSignUp = false }: Props = Astro.props;
     <br />
     {'Participation fee '}<span>{'$20'}</span>
   </p>
-  <p class="tcs">
-    {'*T&Cs apply'}
-  </p>
+  <a
+    class="tcs"
+    href="/Workout4Wildlife-Terms&Conditions-20230330.pdf"
+    target="_blank"
+  >
+    {'*T&Cs Apply'}
+  </a>
 </div>
 
 <style>
@@ -61,6 +65,12 @@ const { showSignUp = false }: Props = Astro.props;
     margin: 0px;
     font-size: var(--base-font-size);
     margin-bottom: calc(var(--base-font-size) * 0.5);
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 
   span {
