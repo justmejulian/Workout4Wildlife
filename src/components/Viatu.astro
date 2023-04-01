@@ -14,6 +14,6 @@ const { showSignUp = false }: Props = Astro.props;
   title="About Viatu"
   text={'Viatu is a tech-enabled travel company promoting sustainability and transparency in travel. We are incredibly proud to be the travel partner for Workout4Wildlife.'}
 >
-  {showSignUp && <EmailForm client:load />}
-  <LinkButton title="Visti Viatu" url="http://www.viatu.com" client:load />
+  {showSignUp && <EmailForm client:visible/>}
+  <LinkButton title="Visit Viatu" url="http://www.viatu.com" client:visible />
 </Section>
