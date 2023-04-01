@@ -1,0 +1,75 @@
+---
+export interface Props {
+  number: string;
+  text: string;
+  icon: string;
+}
+
+const { number, text, icon } = Astro.props;
+---
+
+<div class="container">
+  <img src={icon} alt="Impact Icon" />
+  <div class="body">
+    <h3>{number}</h3>
+    <p>
+      {text}
+    </p>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .body {
+    text-align: center;
+  }
+
+  img {
+    height: calc(var(--base-font-size) * 4);
+    margin-bottom: var(--margin);
+  }
+
+  h3 {
+    margin-bottom: var(--base-font-size);
+  }
+
+  p {
+    font-size: var(--base-font-size);
+    font-weight: 500;
+    font-family: 'Satoshi-Regular';
+    color: #767676;
+    margin: 0;
+    width: calc(var(--base-font-size) * 8);
+  }
+
+  @media only screen and (max-width: 970px) {
+    .container {
+      flex-direction: row;
+    }
+
+    .body {
+      flex-direction: column;
+      margin-bottom: 0px;
+      text-align: left;
+    }
+
+    h3 {
+      margin-bottom: 4px;
+    }
+
+  p {
+    width: auto;
+  }
+
+    img {
+      height: calc(var(--base-font-size) * 3);
+      margin-bottom: 0;
+      margin-right: var(--margin);
+    }
+  }
+</style>

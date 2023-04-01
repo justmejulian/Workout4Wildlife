@@ -1,19 +1,59 @@
 ---
 import Section from '@components/Section.astro';
 import LinkButton from '@components/LinkButton';
+import ImpactPoint from './ImpactPoint.astro';
+
 import SRT from '@images/SRT.png';
+import Rhino from '@images/RhinoIcon.png';
+import Ranger from '@images/RangerIcon.png';
+import Steps from '@images/StepsIcon.png';
 ---
 
 <Section
   id="beneficiary"
   title="Beneficiary"
   logo={SRT}
-  text={'Since 1982, Save the Rhino Trust (SRT) has been protecting the desert-adapted black rhino in order to ensure security for these and other wildlife species, a protected habitat, and a sustainable future for local communities long into the future.'}
+  text="Save the Rhino Trust (SRT) was founded in 1982 and has been at the forefront of conservation for over four decades. By monitoring and protecting desert-adapted black rhino, SRT aims to ensure a safe habitat for these and other wildlife species while creating a sustainable future for local communities."
   isGray
 >
+  <p>Here are some 2022 impact numbers:</p>
+  <div class="container">
+    <ImpactPoint
+      number="12,000"
+      text="ranger field days in 2022"
+      icon={Ranger}
+    />
+    <ImpactPoint
+      number="52,000 km"
+      text="patrolled on foot in 2022"
+      icon={Steps}
+    />
+    <ImpactPoint number="3,000" text="rhino sightings in 2022" icon={Rhino} />
+  </div>
   <LinkButton
     title="Visit SRT"
     url="https://www.savetherhinotrust.org"
     client:visible
   />
 </Section>
+
+<style>
+  p {
+    margin-top: calc(var(--margin) * -1);
+    margin-bottom: calc(var(--margin) * 2);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap: calc(var(--margin) * 4);
+    margin-bottom: calc(var(--margin) * 2);
+  }
+
+  @media only screen and (max-width: 970px) {
+    .container {
+      flex-direction: column;
+      gap: var(--margin);
+    }
+  }
+</style>
