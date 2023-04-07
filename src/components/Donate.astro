@@ -1,0 +1,62 @@
+---
+import Section from '@components/Section.astro';
+import LinkButton from './LinkButton';
+---
+
+<Section
+  id="donate"
+  title="Donate"
+  text="If you would like to further support our foundation, please use one of the following options:"
+>
+  <div class="container">
+    <h3>Direct Transfer</h3>
+    <p>
+      IBAN: CH73 0070 0114 8079 6075 8
+      <br />
+      W4W - Workout4Wildlife
+      <br />
+      8000 Zürich
+      <br />
+    </p>
+  </div>
+  <div class="container">
+    <h3>Credit card</h3>
+    <p>Please use the following link:</p>
+    <LinkButton
+      title="Donate via Stripe"
+      url="https://buy.stripe.com/28o9EB2X6fPyfeg00a"
+      client:visible
+    />
+  </div>
+</Section>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  p {
+    text-align: center;
+    margin: var(--margin) 0px;
+  }
+
+  b {
+    font-family: 'Satoshi-Bold';
+    font-weight: 700;
+  }
+
+  img {
+    width: 400px;
+    margin-top: var(--margin);
+  }
+
+  @media only screen and (max-width: 970px) {
+  }
+</style>
