@@ -3,37 +3,43 @@ import Instagram from '@images/instagram.webp';
 ---
 
 <footer id="footer">
-  <a
-    href="https://www.instagram.com/workout4wildlife_/?igshid=YmMyMTA2M2Y%3D"
-    target="_blank"
-    class='logo'
-  >
-    <img src={Instagram} alt="Instagram logo" />
-  </a>
+  <div
+      class="logo">
+    <a
+      href="https://www.instagram.com/workout4wildlife_/?igshid=YmMyMTA2M2Y%3D"
+      target="_blank"
+    >
+      <img src={Instagram} alt="Instagram logo" />
+    </a>
+  </div>
 
-  <a href="/Workout4Wildlife-Terms&Conditions-20230330.pdf" target="_blank" class="tandc">
+  <a
+    href="/Workout4Wildlife-Terms&Conditions-20230330.pdf"
+    target="_blank"
+    class="tandc"
+  >
     Terms & Conditions
   </a>
-  <span>© Workout4Wildlife 2023</span>
+  <span class="copyright">© Workout4Wildlife 2023</span>
 </footer>
 
 <style>
   #footer {
     background-color: #541736;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 20px 120px;
     color: #ffffff;
   }
 
-  .tandc {
-    flex-grow: 2;
-    text-align: center;
+  .copyright {
+    flex: 1;
+    text-align: right;
   }
 
   .logo {
-    flex-grow: 1;
+    flex: 1;
   }
 
   img {
