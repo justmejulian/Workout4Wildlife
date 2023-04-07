@@ -16,52 +16,64 @@ import FelixStudios from '@images/FelixStudios.webp';
 
 const Partners = [
   {
-    url: Gondwana,
+    imageUrl: Gondwana,
     alt: 'Gondwana',
+    url: 'https://gondwana-collection.com/'
   },
   {
-    url: BigSkyLodges,
+    imageUrl: BigSkyLodges,
     alt: 'BigSkyLodges',
+    url: 'https://www.bigsky-namibia.com/'
   },
   {
-    url: NaturalSelection,
+    imageUrl: NaturalSelection,
     alt: 'NaturalSelection',
+    url: 'https://naturalselection.travel/locations/namibia'
   },
   {
-    url: NamibaSky,
+    imageUrl: NamibaSky,
     alt: 'NamibaSky',
+    url: 'https://balloon-safaris.com/'
   },
   {
-    url: MolaMola,
+    imageUrl: MolaMola,
     alt: 'MolaMola',
+    url: 'https://www.mola-namibia.com/'
   },
   {
-    url: CFDamascus,
+    imageUrl: CFDamascus,
     alt: 'CFDamascus',
+    url: 'https://crossfitdamascus.com/'
   },
   {
-    url: Cycletec,
+    imageUrl: Cycletec,
     alt: 'Cycletec',
+    url: 'http://www.cycletec.com.na/'
   },
   {
-    url: Viatu,
+    imageUrl: Viatu,
     alt: 'Viatu',
+    url: 'https://www.viatu.com/'
   },
   {
-    url: SRT,
+    imageUrl: SRT,
     alt: 'SRT',
+    url: 'http://www.savetherhinotrust.org/'
   },
   {
-    url: CompetitionCorner,
+    imageUrl: CompetitionCorner,
     alt: 'CompetitionCorner',
+    url: 'https://competitioncorner.net/'
   },
   {
-    url: FelixStudios,
+    imageUrl: FelixStudios,
     alt: 'FelixStudios',
+    url: 'https://www.follow-felix.com/'
   },
   {
-    url: Attakk,
+    imageUrl: Attakk,
     alt: 'Attakk',
+    url: 'https://www.instagram.com/attakk_studios/'
   },
 ];
 ---
@@ -70,8 +82,9 @@ const Partners = [
   <div class="partners-container">
     {
       Partners.map((partner) => (
-        <img src={partner.url} alt={partner.alt} loading="lazy" />
-      ))
+<a href={partner.url}>
+        <img src={partner.imageUrl} alt={partner.alt} loading="lazy" />
+      </a>))
     }
   </div>
 </Section>
