@@ -18,62 +18,62 @@ const Partners = [
   {
     imageUrl: Gondwana,
     alt: 'Gondwana',
-    url: 'https://gondwana-collection.com/'
+    url: 'https://gondwana-collection.com/',
   },
   {
     imageUrl: BigSkyLodges,
     alt: 'BigSkyLodges',
-    url: 'https://www.bigsky-namibia.com/'
+    url: 'https://www.bigsky-namibia.com/',
   },
   {
     imageUrl: NaturalSelection,
     alt: 'NaturalSelection',
-    url: 'https://naturalselection.travel/locations/namibia'
+    url: 'https://naturalselection.travel/locations/namibia',
   },
   {
     imageUrl: NamibaSky,
     alt: 'NamibaSky',
-    url: 'https://balloon-safaris.com/'
+    url: 'https://balloon-safaris.com/',
   },
   {
     imageUrl: MolaMola,
     alt: 'MolaMola',
-    url: 'https://www.mola-namibia.com/'
+    url: 'https://www.mola-namibia.com/',
   },
   {
     imageUrl: CFDamascus,
     alt: 'CFDamascus',
-    url: 'https://crossfitdamascus.com/'
+    url: 'https://crossfitdamascus.com/',
   },
   {
     imageUrl: Cycletec,
     alt: 'Cycletec',
-    url: 'http://www.cycletec.com.na/'
+    url: 'http://www.cycletec.com.na/',
   },
   {
     imageUrl: Viatu,
     alt: 'Viatu',
-    url: 'https://www.viatu.com/'
+    url: 'https://www.viatu.com/',
   },
   {
     imageUrl: SRT,
     alt: 'SRT',
-    url: 'http://www.savetherhinotrust.org/'
+    url: 'http://www.savetherhinotrust.org/',
   },
   {
     imageUrl: CompetitionCorner,
     alt: 'CompetitionCorner',
-    url: 'https://competitioncorner.net/'
+    url: 'https://competitioncorner.net/',
   },
   {
     imageUrl: FelixStudios,
     alt: 'FelixStudios',
-    url: 'https://www.follow-felix.com/'
+    url: 'https://www.follow-felix.com/',
   },
   {
     imageUrl: Attakk,
     alt: 'Attakk',
-    url: 'https://www.instagram.com/attakk_studios/'
+    url: 'https://www.instagram.com/attakk_studios/',
   },
 ];
 ---
@@ -82,9 +82,10 @@ const Partners = [
   <div class="partners-container">
     {
       Partners.map((partner) => (
-<a href={partner.url}>
-        <img src={partner.imageUrl} alt={partner.alt} loading="lazy" />
-      </a>))
+        <a href={partner.url}>
+          <img src={partner.imageUrl} alt={partner.alt} loading="lazy" />
+        </a>
+      ))
     }
   </div>
 </Section>
