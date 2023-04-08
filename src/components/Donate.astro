@@ -11,7 +11,10 @@ import LinkButton from './LinkButton';
   <div class="container">
     <h3>Direct Transfer</h3>
     <p>
-      IBAN: CH73 0070 0114 8079 6075 8
+      {'IBAN: '}
+      <br class="mobile-break" />
+      CH73 0070 0114 8079 6075 8
+      <br class="mobile-break" />
       <br />
       W4W - Workout4Wildlife
       <br />
@@ -23,7 +26,7 @@ import LinkButton from './LinkButton';
     <h3>Credit card</h3>
     <p>Please use the following link:</p>
     <LinkButton
-      title="Donate via Stripe"
+      title="Donate"
       url="https://buy.stripe.com/28o9EB2X6fPyfeg00a"
       client:visible
     />
@@ -57,6 +60,13 @@ import LinkButton from './LinkButton';
     margin-top: var(--margin);
   }
 
+  .mobile-break {
+    display: none;
+  }
+
   @media only screen and (max-width: 970px) {
+    .mobile-break {
+      display: inherit;
+    }
   }
 </style>
