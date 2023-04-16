@@ -1,0 +1,61 @@
+---
+import Section from '@components/Section.astro';
+import LinkButton from './LinkButton';
+---
+
+<Section
+  id="workout"
+  title="Workout"
+  isGray
+  text="Workout description for the 2023 Workout4Wildlife challenge."
+>
+  <iframe
+    width="315"
+    height="560"
+    src="https://www.youtube.com/embed/uS8Z-bweQpM"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+
+  <div class="buttonContainer">
+    <LinkButton
+      title="Workout Description"
+      url="https://competitioncorner.net/events/9736/workouts?f=individual&d=61487&w=55351"
+      client:visible
+    />
+
+    <LinkButton
+      title="Leaderboard"
+      url="https://competitioncorner.net/ff/9736/results#group_61487"
+      client:visible
+    />
+  </div>
+  <p>
+    {
+      'Thank you Competition Corner for waving all fees and hosting Workout4Wildlife at no cost. We are very grateful for your amazing support.'
+    }
+  </p>
+</Section>
+
+<style>
+  iframe {
+    margin-bottom: var(--margin);
+    border-radius: 10px;
+  }
+
+  p {
+    margin-top: var(--margin);
+    margin-bottom: 0px;
+    text-align: center;
+  }
+  .buttonContainer {
+    display: flex;
+    gap: var(--margin);
+  }
+  @media only screen and (max-width: 970px) {
+    .buttonContainer {
+      flex-direction: column;
+    }
+  }
+</style>
