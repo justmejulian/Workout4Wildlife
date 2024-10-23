@@ -1,0 +1,43 @@
+---
+interface Props {
+  title?: string;
+  subTitle?: string;
+}
+
+const { title, subTitle }: Props = Astro.props;
+---
+
+<div class="overlay">
+  <div>
+    <h1>{title}</h1>
+    <p>{subTitle}</p>
+  </div>
+</div>
+
+<style>
+  .overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(84, 23, 54, 0.8);
+    cursor: pointer;
+  }
+  h1 {
+    color: #fee878;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    font-weight: 700;
+    font-size: calc(var(--base-font-size) * 2);
+    color: #ffffff;
+    padding: 16px;
+  }
+</style>
