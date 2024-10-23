@@ -1,0 +1,46 @@
+---
+import Section from '@components/Section.astro';
+import dreakellImage from '@images/dreakell.png';
+import WinnerVideo from '@images/winner.mp4';
+---
+
+<Section
+  id="winner"
+  title="We have a Winner"
+  text={'We would like to thank everyone who participated and donated to Workout4Wildife and raised over $6300. Your contribution made it possible to support amazing conservation efforts and help save the rhinos.'}
+  isGray
+>
+  <div class="container">
+    <video controls src={WinnerVideo}></video>
+    <img src={dreakellImage} alt="@dreakell" loading="lazy" />
+  </div>
+</Section>
+
+<style>
+  .container {
+    width: 100%;
+    max-width: 60ch;
+    padding: 12px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+  }
+  video {
+    width: 45%;
+    border-radius: 10px;
+  }
+  img {
+    width: 45%;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: right;
+  }
+  @media only screen and (max-width: 570px) {
+    video {
+      width: 100%;
+    }
+    img {
+      display: none;
+    }
+  }
+</style>
